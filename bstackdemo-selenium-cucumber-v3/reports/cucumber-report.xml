@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="777.864" tests="12" skipped="0" failures="0" errors="0">
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="User registration availability and email validation scenarios" time="12.639">
+<system-out><![CDATA[
+Given I am on the BStackDemo home page......................................passed
+When I execute registration and email validation test cases TC001 to TC005..passed
+Then all executed test cases should pass....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="User login authentication and logout scenarios" time="83.427">
+<system-out><![CDATA[
+Given I am on the BStackDemo home page......................................passed
+When I execute login authentication and logout test cases TC006 to TC012....passed
+Then all executed test cases should pass....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Home page and product listing scenarios" time="27.767">
+<system-out><![CDATA[
+Given I am on the BStackDemo home page......................................passed
+When I execute home page and product listing test cases TC013 to TC017......passed
+Then all executed test cases should pass....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Product vendor filter scenarios" time="73.671">
+<system-out><![CDATA[
+Given I am on the BStackDemo home page......................................passed
+When I execute product vendor filter test cases TC018 to TC021..............passed
+Then all executed test cases should pass....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Product price sort scenarios" time="89.477">
+<system-out><![CDATA[
+Given I am on the BStackDemo home page......................................passed
+When I execute product price sort test cases TC022 to TC024.................passed
+Then all executed test cases should pass....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Cart add and cart view scenarios" time="70.477">
+<system-out><![CDATA[
+Given I am on the BStackDemo home page......................................passed
+When I execute cart add and cart view test cases TC025 to TC031.............passed
+Then all executed test cases should pass....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Cart quantity total and remove scenarios" time="67.075">
+<system-out><![CDATA[
+Given I am on the BStackDemo home page......................................passed
+When I execute cart quantity total and remove test cases TC032 to TC038.....passed
+Then all executed test cases should pass....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Checkout address pincode validation and order scenarios" time="263.253">
+<system-out><![CDATA[
+Given I am on the BStackDemo home page......................................passed
+When I execute checkout address pincode validation and order test cases TC039 to TC055.passed
+Then all executed test cases should pass....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Logout and browser security scenarios" time="38.347">
+<system-out><![CDATA[
+Given I am on the BStackDemo home page......................................passed
+When I execute logout and browser security test cases TC056 to TC057........passed
+Then all executed test cases should pass....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Framework wait screenshot and report scenarios" time="22.523">
+<system-out><![CDATA[
+Given I am on the BStackDemo home page......................................passed
+When I execute framework wait screenshot and report test cases TC058 to TC061.passed
+Then all executed test cases should pass....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Chrome browser compatibility and responsive scenarios" time="17.443">
+<system-out><![CDATA[
+Given I am on the BStackDemo home page......................................passed
+When I execute chrome compatibility and responsive test cases TC062 and TC064.passed
+Then all executed test cases should pass....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Edge browser compatibility scenario" time="11.34">
+<system-out><![CDATA[
+Given I am on the BStackDemo home page......................................passed
+When I execute edge compatibility test case TC063...........................passed
+Then all executed test cases should pass....................................passed
+]]></system-out>
+</testcase>
+</testsuite>

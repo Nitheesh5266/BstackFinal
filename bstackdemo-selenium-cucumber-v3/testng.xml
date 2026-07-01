@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="BStackDemo Selenium Cucumber Suite" parallel="false">
+    <test name="BStackDemo Execution Flow Tests">
+        <classes>
+            <class name="com.bstackdemo.runner.TestRunner"/>
+        </classes>
+    </test>
+</suite>
