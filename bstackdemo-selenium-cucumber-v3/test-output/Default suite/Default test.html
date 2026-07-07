@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>12/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>10/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jul 01 15:25:35 IST 2026</td>
+<td>Started on:</td><td>Tue Jul 07 11:02:00 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>778 seconds (778807 ms)</td>
+<tr><td>Total time:</td><td>677 seconds (677180 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,81 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Edge browser compatibility scenario", "BStackDemo scenarios sorted by real user execution flow"</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 148
+Current browser version is 150.0.4078.48 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe 
+Host info: host: &apos;LAPTOP-30TF6H8T&apos;, ip: &apos;10.240.151.22&apos;
+Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--start-maximized, --remote-allow-origins=*], binary: C:\Program Files (x86)\Micr..., extensions: []}}]}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:245)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:60)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:56)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:48)
+	at com.bstackdemo.base.DriverFactory.initDriver(DriverFactory.java:37)
+	at com.bstackdemo.hooks.Hooks.invokeBrowserBasedOnScenario(Hooks.java:20)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1362302830", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1362302830'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 148
+Current browser version is 150.0.4078.48 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe 
+Host info: host: &apos;LAPTOP-30TF6H8T&apos;, ip: &apos;10.240.151.22&apos;
+Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--start-maximized, --remote-allow-origins=*], binary: C:\Program Files (x86)\Micr..., extensions: []}}]}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:245)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:60)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:56)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:48)
+	at com.bstackdemo.base.DriverFactory.initDriver(DriverFactory.java:37)
+	at com.bstackdemo.hooks.Hooks.invokeBrowserBasedOnScenario(Hooks.java:20)
+</pre></div></td>
+<td>1</td>
+<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
+<tr>
+<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Checkout address pincode validation and order scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
+<td><div><pre>java.lang.AssertionError: Failed test cases:
+TC053 Validate checkout with special characters in name fields -&gt; Special-character name validation was not detected. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at com.bstackdemo.steps.BStackDemoSteps.allExecutedTestCasesShouldPass(BStackDemoSteps.java:730)
+	at ✽.all executed test cases should pass(file:///C:/Users/Charan%20Reddy/git/BstackFinal/bstackdemo-selenium-cucumber-v3/src/test/resources/features/bstackdemo_execution_flow.feature:51)
+</pre></div><a href='#' onClick='toggleBox("stack-trace77049289", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace77049289'><pre>java.lang.AssertionError: Failed test cases:
+TC053 Validate checkout with special characters in name fields -&gt; Special-character name validation was not detected. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at com.bstackdemo.steps.BStackDemoSteps.allExecutedTestCasesShouldPass(BStackDemoSteps.java:730)
+	at ✽.all executed test cases should pass(file:///C:/Users/Charan%20Reddy/git/BstackFinal/bstackdemo-selenium-cucumber-v3/src/test/resources/features/bstackdemo_execution_flow.feature:51)
+</pre></div></td>
+<td>269</td>
+<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,64 +151,54 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Checkout address pincode validation and order scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
-<td></td>
-<td>263</td>
-<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
-<tr>
-<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Framework wait screenshot and report scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
-<td></td>
-<td>22</td>
-<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
-<tr>
-<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cart add and cart view scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
-<td></td>
-<td>70</td>
-<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
-<tr>
-<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Home page and product listing scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
-<td></td>
-<td>27</td>
-<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
-<tr>
-<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cart quantity total and remove scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
-<td></td>
-<td>67</td>
-<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
-<tr>
-<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Edge browser compatibility scenario", "BStackDemo scenarios sorted by real user execution flow"</td>
-<td></td>
-<td>11</td>
-<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
-<tr>
-<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User registration availability and email validation scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
-<td></td>
-<td>12</td>
-<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
-<tr>
 <td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logout and browser security scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
 <td></td>
-<td>38</td>
-<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
-<tr>
-<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login authentication and logout scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
-<td></td>
-<td>83</td>
-<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
-<tr>
-<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Product price sort scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
-<td></td>
-<td>89</td>
-<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
-<tr>
-<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Product vendor filter scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
-<td></td>
-<td>73</td>
+<td>32</td>
 <td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
 <tr>
 <td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Chrome browser compatibility and responsive scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
 <td></td>
-<td>17</td>
+<td>15</td>
+<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
+<tr>
+<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Product price sort scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
+<td></td>
+<td>22</td>
+<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
+<tr>
+<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Framework wait screenshot and report scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
+<td></td>
+<td>27</td>
+<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
+<tr>
+<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login authentication and logout scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
+<td></td>
+<td>80</td>
+<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
+<tr>
+<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User registration availability and email validation scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
+<td></td>
+<td>16</td>
+<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
+<tr>
+<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Home page and product listing scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
+<td></td>
+<td>35</td>
+<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
+<tr>
+<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cart add and cart view scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
+<td></td>
+<td>65</td>
+<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
+<tr>
+<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Product vendor filter scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
+<td></td>
+<td>42</td>
+<td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
+<tr>
+<td title='com.bstackdemo.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.bstackdemo.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cart quantity total and remove scenarios", "BStackDemo scenarios sorted by real user execution flow"</td>
+<td></td>
+<td>66</td>
 <td>com.bstackdemo.runner.TestRunner@313b2ea6</td></tr>
 </table><p>
 </body>
