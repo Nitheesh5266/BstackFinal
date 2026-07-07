@@ -44,11 +44,25 @@ Feature: BStackDemo scenarios sorted by real user execution flow
     When I execute cart quantity total and remove test cases TC032 to TC038
     Then all executed test cases should pass
 
-  @chrome @checkout @address @pincode @validation @execution_flow @TC039_TO_TC055
-  Scenario: Checkout address pincode validation and order scenarios
-    Given I am on the BStackDemo home page
-    When I execute checkout address pincode validation and order test cases TC039 to TC055
-    Then all executed test cases should pass
+ @chrome @checkout @pincode @execution_flow @TC039_TO_TC046
+Scenario: Checkout navigation and pincode validation scenarios
+  Given I am on the BStackDemo home page
+  When I execute checkout navigation and pincode test cases TC039 to TC046
+  Then all executed test cases should pass
+
+
+@chrome @checkout @validation @execution_flow @TC047_TO_TC053
+Scenario: Checkout mandatory field validation scenarios
+  Given I am on the BStackDemo home page
+  When I execute checkout validation test cases TC047 to TC053
+  Then all executed test cases should pass
+
+
+@chrome @checkout @order @execution_flow @TC054_TO_TC055
+Scenario: Checkout order and confirmation scenarios
+  Given I am on the BStackDemo home page
+  When I execute checkout order test cases TC054 to TC055
+  Then all executed test cases should pass
 
   @chrome @logout @security @execution_flow @TC056_TO_TC057
   Scenario: Logout and browser security scenarios

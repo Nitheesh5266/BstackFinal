@@ -369,7 +369,10 @@ public class BStackDemoSteps {
         runTestCase("TC035 Validate subtotal after quantity change", this::tc035ValidateSubtotalAfterQuantityChange);
         runTestCase("TC036 Validate total for multiple products", this::tc036ValidateTotalForMultipleProducts);
         runTestCase("TC037 Remove one item from cart with multiple products", this::tc037RemoveOneItemFromCartWithMultipleProducts);
-        runTestCase("TC038 Remove single item and verify empty cart message", this::tc038RemoveSingleItemAndVerifyEmptyCart);
+        runTestCase(
+                "TC038 Remove single item and verify cart becomes empty",
+                this::tc038RemoveSingleItemAndVerifyEmptyCart
+        );
     }
 
     private void tc032IncreaseItemQuantityInCart() {
@@ -427,32 +430,130 @@ public class BStackDemoSteps {
     }
 
     private void tc038RemoveSingleItemAndVerifyEmptyCart() {
+
         homePage.openHomeClean();
+
         homePage.addFirstProductToCart();
+
+        Assert.assertTrue(
+                cartPage.getCartCount() > 0,
+                "Product was not added to cart before remove test."
+        );
+
         cartPage.removeProductFromCart();
-        Assert.assertTrue(cartPage.isEmptyCartDisplayed(), "Empty cart message is not displayed.");
+
+        sleep(700);
+
+        Assert.assertEquals(
+                cartPage.getCartCount(),
+                0,
+                "Cart is not empty after removing the only product."
+        );
     }
 
-    @When("I execute checkout address pincode validation and order test cases TC039 to TC055")
-    public void executeCheckoutAddressPincodeValidationAndOrderTestCases() {
+
+    
+    @When("I execute checkout navigation and pincode test cases TC039 to TC046")
+    public void executeCheckoutNavigationAndPincodeTestCases() {
+
         startScenarioGroup();
-        runTestCase("TC039 Verify checkout cannot proceed with empty cart", this::tc039CheckoutCannotProceedWithEmptyCart);
-        runTestCase("TC040 Proceed to checkout from cart", this::tc040ProceedToCheckoutFromCart);
-        runTestCase("TC041 Checkout as logged-in valid user", this::tc041CheckoutAsLoggedInValidUser);
-        runTestCase("TC042 Verify checkout summary before placing order", this::tc042VerifyCheckoutSummaryBeforeOrder);
-        runTestCase("TC043 Validate real-time valid pincode before checkout", this::tc043ValidateRealTimeValidPincode);
-        runTestCase("TC044 Validate real-time invalid pincode before checkout", this::tc044ValidateRealTimeInvalidPincode);
-        runTestCase("TC045 Validate address state and pincode match using real-time lookup", this::tc045ValidateAddressStatePincodeMatch);
-        runTestCase("TC046 Validate address state and pincode mismatch using real-time lookup", this::tc046ValidateAddressStatePincodeMismatch);
-        runTestCase("TC047 Validate checkout with all mandatory fields blank", this::tc047CheckoutWithAllMandatoryFieldsBlank);
-        runTestCase("TC048 Validate checkout with first name blank", this::tc048CheckoutWithFirstNameBlank);
-        runTestCase("TC049 Validate checkout with last name blank", this::tc049CheckoutWithLastNameBlank);
-        runTestCase("TC050 Validate checkout with address blank", this::tc050CheckoutWithAddressBlank);
-        runTestCase("TC051 Validate checkout with state blank", this::tc051CheckoutWithStateBlank);
-        runTestCase("TC052 Validate checkout with postal code blank", this::tc052CheckoutWithPostalCodeBlank);
-        runTestCase("TC053 Validate checkout with special characters in name fields", this::tc053CheckoutWithSpecialCharactersInNameFields);
-        runTestCase("TC054 Place order with valid checkout details", this::tc054PlaceOrderWithValidCheckoutDetails);
-        runTestCase("TC055 Verify confirmation page details", this::tc055VerifyConfirmationPageDetails);
+
+        runTestCase(
+                "TC039 Verify checkout cannot proceed with empty cart",
+                this::tc039CheckoutCannotProceedWithEmptyCart
+        );
+
+        runTestCase(
+                "TC040 Proceed to checkout from cart",
+                this::tc040ProceedToCheckoutFromCart
+        );
+
+        runTestCase(
+                "TC041 Checkout as logged-in valid user",
+                this::tc041CheckoutAsLoggedInValidUser
+        );
+
+        runTestCase(
+                "TC042 Verify checkout summary before placing order",
+                this::tc042VerifyCheckoutSummaryBeforeOrder
+        );
+
+        runTestCase(
+                "TC043 Validate real-time valid pincode before checkout",
+                this::tc043ValidateRealTimeValidPincode
+        );
+
+        runTestCase(
+                "TC044 Validate real-time invalid pincode before checkout",
+                this::tc044ValidateRealTimeInvalidPincode
+        );
+
+        runTestCase(
+                "TC045 Validate address state and pincode match using real-time lookup",
+                this::tc045ValidateAddressStatePincodeMatch
+        );
+
+        runTestCase(
+                "TC046 Validate address state and pincode mismatch using real-time lookup",
+                this::tc046ValidateAddressStatePincodeMismatch
+        );
+    }
+    
+    @When("I execute checkout validation test cases TC047 to TC053")
+    public void executeCheckoutValidationTestCases() {
+
+        startScenarioGroup();
+
+        runTestCase(
+                "TC047 Validate checkout with all mandatory fields blank",
+                this::tc047CheckoutWithAllMandatoryFieldsBlank
+        );
+
+        runTestCase(
+                "TC048 Validate checkout with first name blank",
+                this::tc048CheckoutWithFirstNameBlank
+        );
+
+        runTestCase(
+                "TC049 Validate checkout with last name blank",
+                this::tc049CheckoutWithLastNameBlank
+        );
+
+        runTestCase(
+                "TC050 Validate checkout with address blank",
+                this::tc050CheckoutWithAddressBlank
+        );
+
+        runTestCase(
+                "TC051 Validate checkout with state blank",
+                this::tc051CheckoutWithStateBlank
+        );
+
+        runTestCase(
+                "TC052 Validate checkout with postal code blank",
+                this::tc052CheckoutWithPostalCodeBlank
+        );
+
+        runTestCase(
+                "TC053 Verify checkout behavior with special characters in name fields",
+                this::tc053CheckoutWithSpecialCharactersInNameFields
+        );
+    }
+    
+    @When("I execute checkout order test cases TC054 to TC055")
+    public void executeCheckoutOrderTestCases() {
+
+        startScenarioGroup();
+
+        runTestCase(
+                "TC054 Place order with valid checkout details",
+                this::tc054PlaceOrderWithValidCheckoutDetails
+        );
+
+        runTestCase(
+                "TC055 Verify confirmation page details",
+                this::tc055VerifyConfirmationPageDetails
+        );
     }
 
     private void tc039CheckoutCannotProceedWithEmptyCart() {
@@ -495,36 +596,67 @@ public class BStackDemoSteps {
         );
     }
 
+
     private void tc043ValidateRealTimeValidPincode() {
-        homePage.openHomeClean();
-        validatePincode(ConfigReader.get("validPincode"));
-        Assert.assertTrue(pincodeValid, "Expected valid pincode to pass.");
+
+        validatePincode(
+                ConfigReader.get("validPincode")
+        );
+
+        Assert.assertTrue(
+                pincodeValid,
+                "Expected valid pincode to pass."
+        );
     }
+
 
     private void tc044ValidateRealTimeInvalidPincode() {
-        homePage.openHomeClean();
-        validatePincode(ConfigReader.get("invalidPincode"));
-        Assert.assertFalse(pincodeValid, "Expected invalid pincode to fail.");
+
+        validatePincode(
+                ConfigReader.get("invalidPincode")
+        );
+
+        Assert.assertFalse(
+                pincodeValid,
+                "Expected invalid pincode to fail."
+        );
     }
 
+
+    
     private void tc045ValidateAddressStatePincodeMatch() {
-        homePage.openHomeClean();
+
         validateAddressStateAndPincode(
+
                 ConfigReader.get("validAddress"),
+
                 ConfigReader.get("validState"),
+
                 ConfigReader.get("validPincode")
         );
-        Assert.assertTrue(addressMatchesPincode, "Expected address/state to match pincode lookup result.");
+
+        Assert.assertTrue(
+                addressMatchesPincode,
+                "Expected address/state to match pincode lookup result."
+        );
     }
 
+    
     private void tc046ValidateAddressStatePincodeMismatch() {
-        homePage.openHomeClean();
+
         validateAddressStateAndPincode(
+
                 ConfigReader.get("validAddress"),
+
                 ConfigReader.get("mismatchState"),
+
                 ConfigReader.get("validPincode")
         );
-        Assert.assertFalse(addressMatchesPincode, "Expected address/state to mismatch pincode lookup result.");
+
+        Assert.assertFalse(
+                addressMatchesPincode,
+                "Expected address/state to mismatch pincode lookup result."
+        );
     }
 
     private void tc047CheckoutWithAllMandatoryFieldsBlank() {

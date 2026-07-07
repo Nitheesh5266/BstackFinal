@@ -1,102 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="676.247" tests="12" skipped="0" failures="2" errors="0">
-<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="User registration availability and email validation scenarios" time="15.88">
+<testsuite name="Cucumber" time="811.701" tests="14" skipped="0" failures="1" errors="0">
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="User registration availability and email validation scenarios" time="18.614">
 <system-out><![CDATA[
 Given I am on the BStackDemo home page......................................passed
 When I execute registration and email validation test cases TC001 to TC005..passed
 Then all executed test cases should pass....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="User login authentication and logout scenarios" time="80.495">
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="User login authentication and logout scenarios" time="92.986">
 <system-out><![CDATA[
 Given I am on the BStackDemo home page......................................passed
 When I execute login authentication and logout test cases TC006 to TC012....passed
 Then all executed test cases should pass....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Home page and product listing scenarios" time="35.375">
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Home page and product listing scenarios" time="45.041">
 <system-out><![CDATA[
 Given I am on the BStackDemo home page......................................passed
 When I execute home page and product listing test cases TC013 to TC017......passed
 Then all executed test cases should pass....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Product vendor filter scenarios" time="42.152">
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Product vendor filter scenarios" time="55.399">
 <system-out><![CDATA[
 Given I am on the BStackDemo home page......................................passed
 When I execute product vendor filter test cases TC018 to TC021..............passed
 Then all executed test cases should pass....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Product price sort scenarios" time="22.386">
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Product price sort scenarios" time="31.833">
 <system-out><![CDATA[
 Given I am on the BStackDemo home page......................................passed
 When I execute product price sort test cases TC022 to TC024.................passed
 Then all executed test cases should pass....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Cart add and cart view scenarios" time="65.066">
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Cart add and cart view scenarios" time="85.794">
 <system-out><![CDATA[
 Given I am on the BStackDemo home page......................................passed
 When I execute cart add and cart view test cases TC025 to TC031.............passed
 Then all executed test cases should pass....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Cart quantity total and remove scenarios" time="66.94">
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Cart quantity total and remove scenarios" time="85.546">
 <system-out><![CDATA[
 Given I am on the BStackDemo home page......................................passed
 When I execute cart quantity total and remove test cases TC032 to TC038.....passed
 Then all executed test cases should pass....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Checkout address pincode validation and order scenarios" time="269.854">
-<failure type="java.lang.AssertionError" message="Failed test cases:
-TC053 Validate checkout with special characters in name fields -&gt; Special-character name validation was not detected. expected [true] but found [false]">
-<![CDATA[java.lang.AssertionError: Failed test cases:
-TC053 Validate checkout with special characters in name fields -> Special-character name validation was not detected. expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.bstackdemo.steps.BStackDemoSteps.allExecutedTestCasesShouldPass(BStackDemoSteps.java:730)
-	at ✽.all executed test cases should pass(file:///C:/Users/Charan%20Reddy/git/BstackFinal/bstackdemo-selenium-cucumber-v3/src/test/resources/features/bstackdemo_execution_flow.feature:51)
-]]>
-</failure>
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Checkout navigation and pincode validation scenarios" time="76.042">
 <system-out><![CDATA[
 Given I am on the BStackDemo home page......................................passed
-When I execute checkout address pincode validation and order test cases TC039 to TC055.passed
-Then all executed test cases should pass....................................failed
+When I execute checkout navigation and pincode test cases TC039 to TC046....passed
+Then all executed test cases should pass....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Logout and browser security scenarios" time="32.644">
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Checkout mandatory field validation scenarios" time="158.062">
+<system-out><![CDATA[
+Given I am on the BStackDemo home page......................................passed
+When I execute checkout validation test cases TC047 to TC053................passed
+Then all executed test cases should pass....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Checkout order and confirmation scenarios" time="55.243">
+<system-out><![CDATA[
+Given I am on the BStackDemo home page......................................passed
+When I execute checkout order test cases TC054 to TC055.....................passed
+Then all executed test cases should pass....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Logout and browser security scenarios" time="45.219">
 <system-out><![CDATA[
 Given I am on the BStackDemo home page......................................passed
 When I execute logout and browser security test cases TC056 to TC057........passed
 Then all executed test cases should pass....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Framework wait screenshot and report scenarios" time="27.161">
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Framework wait screenshot and report scenarios" time="31.277">
 <system-out><![CDATA[
 Given I am on the BStackDemo home page......................................passed
 When I execute framework wait screenshot and report test cases TC058 to TC061.passed
 Then all executed test cases should pass....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Chrome browser compatibility and responsive scenarios" time="15.911">
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Chrome browser compatibility and responsive scenarios" time="28.055">
 <system-out><![CDATA[
 Given I am on the BStackDemo home page......................................passed
 When I execute chrome compatibility and responsive test cases TC062 and TC064.passed
 Then all executed test cases should pass....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Edge browser compatibility scenario" time="1.9">
+<testcase classname="BStackDemo scenarios sorted by real user execution flow" name="Edge browser compatibility scenario" time="2.038">
 <failure type="org.openqa.selenium.SessionNotCreatedException" message="Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 148
 Current browser version is 150.0.4078.48 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe 
-Host info: host: 'LAPTOP-30TF6H8T', ip: '10.240.151.22'
+Host info: host: 'LAPTOP-30TF6H8T', ip: '10.218.120.22'
 Build info: version: '4.23.1', revision: '656257d8e9'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
 Driver info: org.openqa.selenium.edge.EdgeDriver
 Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--start-maximized, --remote-allow-origins=*], binary: C:\Program Files (x86)\Micr..., extensions: []}}]}]">
 <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 148
 Current browser version is 150.0.4078.48 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe 
-Host info: host: 'LAPTOP-30TF6H8T', ip: '10.240.151.22'
+Host info: host: 'LAPTOP-30TF6H8T', ip: '10.218.120.22'
 Build info: version: '4.23.1', revision: '656257d8e9'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
 Driver info: org.openqa.selenium.edge.EdgeDriver

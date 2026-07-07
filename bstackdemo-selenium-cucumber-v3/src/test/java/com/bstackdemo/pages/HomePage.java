@@ -65,7 +65,7 @@ public class HomePage {
                             "try { window.localStorage.clear(); window.sessionStorage.clear(); } catch(e) {}"
                     );
                 } catch (RuntimeException ignored) {
-                    // Continue with navigation retry.
+                   
                 }
 
                 driver().get(ConfigReader.get("baseUrl"));
@@ -198,7 +198,7 @@ public class HomePage {
                             "} catch(e) {}"
             );
         } catch (RuntimeException ignored) {
-            // Normal reload below is the fallback.
+            
         }
 
         driver().get(ConfigReader.get("baseUrl"));
@@ -225,7 +225,7 @@ public class HomePage {
                 sleep(300);
             }
         } catch (RuntimeException ignored) {
-            // Fallback below reloads the application.
+         
         }
 
         sleep(900);

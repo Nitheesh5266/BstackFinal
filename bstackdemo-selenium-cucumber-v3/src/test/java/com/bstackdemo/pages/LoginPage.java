@@ -42,7 +42,7 @@ public class LoginPage {
             new WebDriverWait(driver(), Duration.ofSeconds(ConfigReader.timeout()))
                     .until(d -> util.exists(usernameInput) || util.exists(loginButton));
         } catch (TimeoutException ignored) {
-            // The test assertion reports the failure.
+            
         }
     }
 
@@ -193,7 +193,7 @@ public class LoginPage {
                             || d.getPageSource().toLowerCase(Locale.ROOT).contains("locked")
                             || d.getPageSource().toLowerCase(Locale.ROOT).contains("error"));
         } catch (TimeoutException ignored) {
-            // The calling test performs the final assertion.
+            
         }
     }
 

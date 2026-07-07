@@ -146,7 +146,7 @@ public class CartPage {
                 sleep(600);
             }
         } catch (NoSuchElementException | StaleElementReferenceException ignored) {
-            // Cart is already closed.
+            
         }
     }
 

@@ -7,12 +7,13 @@ import org.testng.annotations.DataProvider;
 @CucumberOptions(
         features = "src/test/resources/features/bstackdemo_execution_flow.feature",
         glue = {"com.bstackdemo.steps", "com.bstackdemo.hooks"},
-        plugin = {
-                "pretty",
-                "html:reports/cucumber-report.html",
-                "json:reports/cucumber-report.json",
-                "junit:reports/cucumber-report.xml"
-        },
+        		plugin = {
+        		        "pretty",
+        		        "html:reports/cucumber-report.html",
+        		        "json:reports/cucumber-report.json",
+        		        "junit:reports/cucumber-report.xml",
+        		        "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
+        		},
         monochrome = true,
         publish = false
 )
