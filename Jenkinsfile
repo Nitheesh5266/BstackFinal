@@ -6,22 +6,20 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/CharanReddy0909/BstackFinal.git'
-            }
-        }
 
-        stage('Build') {
+        stage('Build & Test') {
             steps {
-                bat 'mvn clean test'
+                dir('bstackdemo-selenium-cucumber-v3') {
+                    bat 'mvn clean test'
+                }
             }
         }
     }
 
     post {
         always {
-            junit 'target/surefire-reports/*.xml'
+            junit allowEmptyResults: true, testResults: 'bstackdemo-selenium-cucumber-v3/target/surefire-reports/*.xml'
+            archiveArtifacts artifacts: 'bstackdemo-selenium-cucumber-v3/target/*/', fingerprint: true
         }
     }
 }
