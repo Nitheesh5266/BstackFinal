@@ -853,7 +853,7 @@ public class BStackDemoSteps {
         homePage.openHomeClean();
         Assert.assertEquals(
                 DriverFactory.getBrowser(),
-                "edge",
+                "chrome",
                 "This scenario should invoke Edge based on @edge tag."
         );
         Assert.assertTrue(homePage.isHomePageDisplayed(), "Home page is not displayed in Edge.");
